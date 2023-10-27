@@ -1,0 +1,19 @@
+class People:
+    def __init__(self, name, dob, nationality):
+        self.name = name
+        self.dob = dob
+        self.nationality = nationality
+    def Show_info(self):
+        print(f"information of person: {self.name}, {self.dob}, {self.nationality}")
+
+class Student(People):
+    def __init__(self,name, dob, nationality, major, university):
+        super().__init__(name, dob, nationality)
+        self.major = major
+        self.university = university
+    def more_info(self):
+        People.Show_info(self)
+        print(f"major: {self.major}, university: {self.university} ")
+
+p2 = Student( "Ciralla" , "06.06.2000", "german", "Artificial intelligence", "IU")
+p2.more_info()
